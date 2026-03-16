@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick スライダー</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <style>
+          body{
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .slider{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .slide-item{
+            height: 300px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .slide-item img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Slick スライダー</h1>
+
+    <div class="slider">
+        <div class="slide-item"><img src="https://picsum.photos/id/1015/800/300" alt="slide1"></div>
+        <div class="slide-item"> <img src="https://picsum.photos/id/1016/800/300" alt="slide2"></div>
+        <div class="slide-item"><img src="https://picsum.photos/id/1018/800/300" alt="slide3"></div>
+    </div>
+
+    <script>
+        $(function(){
+            $(".slider").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll:1
+            })
+        })
+    </script>
+    
+</body>
+</html>

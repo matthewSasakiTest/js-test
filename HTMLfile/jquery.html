@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+
+        body{
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        h1{
+            color: #333;
+        }
+
+        .box{
+            width: 200px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: lightgray;
+            border-radius: 8px;
+        }
+
+        .active{
+            background-color: orangered;
+            color: white;
+        }
+    
+
+        button{
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        
+       <h1>jqueryの練習</h1>
+        <p id="text">ここは文書です</p>
+
+
+        <button id="changeTextBtn">文字を変えるボタン</button>
+        <button id="changeColor">色を変えるボタン</button>
+        <button id="classBtn">クラスを切り替えるボタン</button>
+        <button id="hide">非表示</button>
+        <button id="show">表示</button>
+
+        <div class="box" id="box-id">テキスト</div>
+
+
+    <script>
+    
+       $(function (){
+        $("#changeTextBtn").on("click", function (){
+            $('#text').text("文書が変更されました")
+        })
+        $("#changeColor").on("click", function (){
+            $('#text').css("color", "blue");
+        })
+        $("#classBtn").on("click", function(){
+            $("#box-id").toggleClass("active");
+        })
+        $("#hide").on("click", function(){
+            $("#box-id").hide();
+        })
+        $("#show").on("click", function(){
+            $("#box-id").show();
+        })
+       })
+
+    </script>
+</body>
+</html>
